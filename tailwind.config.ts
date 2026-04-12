@@ -47,6 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        maasai: {
+          olive: "#2d3a0e",
+          gold: "#c8922a",
+          terracotta: "#b5411a",
+          "dark-olive": "#4a5e1f",
+          khaki: "#6b6b1a",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
