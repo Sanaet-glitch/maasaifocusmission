@@ -7,32 +7,20 @@ const col3involved = ["Donate", "Volunteer", "Partner With Us", "News"];
 
 const Footer = () => {
   return (
-    <footer style={{ width: "100vw", position: "relative" }}>
-      <div style={{ position: "absolute", inset: 0, background: "#2d3a0e" }} />
-      <div
-        style={{
-          position: "relative",
-          width: 1280,
-          maxWidth: "100%",
-          margin: "0 auto",
-          minHeight: 778.27,
-          padding: "60px 24px 30px",
-        }}
-        className="grid grid-cols-1 md:grid-cols-4 gap-8"
-      >
+    <footer className="w-screen relative">
+      <div className="absolute inset-0 bg-[#2d3a0e]" />
+      <div className="relative mx-auto w-full max-w-[1280px] px-6 sm:px-8 md:px-12 pt-12 md:pt-16 pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
         {/* Contact */}
         <div>
-          <img src="assets/logo.png" alt="Maasai Focus Mission" style={{ height: 65, objectFit: "contain", marginBottom: 16 }} />
-          <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, color: "#fff" }}>
+          <img src="assets/logo.png" alt="Maasai Focus Mission" className="h-12 md:h-[65px] object-contain mb-4" />
+          <p className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white">
             Questions?{" "}
-            <a href="#" style={{ color: "#c8922a" }}>
-              Contact Us
-            </a>
+            <a href="#" className="text-[#c8922a]">Contact Us</a>
           </p>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, color: "#fff", margin: "16px 0" }}>
+          <p className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white my-3 md:my-4">
             P.O. Box XXXX, Kajiado, Kenya
           </p>
-          <a href="mailto:info@maasaifocusmission.org" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, color: "#c8922a" }}>
+          <a href="mailto:info@maasaifocusmission.org" className="font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] break-all">
             info@maasaifocusmission.org
           </a>
           <div className="flex gap-4 mt-4">
@@ -40,16 +28,16 @@ const Footer = () => {
             <Twitter size={24} color="#c8922a" />
             <Youtube size={24} color="#c8922a" />
           </div>
-          <a href="#" className="block mt-6" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 16, color: "#fff" }}>
+          <a href="#" className="block mt-6 font-['Inter',sans-serif] font-light text-sm md:text-base text-white">
             Privacy Policy
           </a>
         </div>
 
         {/* About */}
         <div>
-          <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, color: "#fff", marginBottom: 16 }}>About</h4>
+          <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mb-4">About</h4>
           {col1.map((l) => (
-            <a key={l} href="#" className="block" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, lineHeight: "28.8512px", color: "#c8922a", margin: "16px 0" }}>
+            <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
               {l}
             </a>
           ))}
@@ -57,9 +45,9 @@ const Footer = () => {
 
         {/* Programs */}
         <div>
-          <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, color: "#fff", marginBottom: 16 }}>Programs & Services</h4>
+          <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mb-4">Programs & Services</h4>
           {col2.map((l) => (
-            <a key={l} href="#" className="block" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, lineHeight: "28.8512px", color: "#c8922a", margin: "16px 0" }}>
+            <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
               {l}
             </a>
           ))}
@@ -67,15 +55,15 @@ const Footer = () => {
 
         {/* Quick Links + Get Involved */}
         <div>
-          <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, color: "#fff", marginBottom: 16 }}>Quick Links</h4>
+          <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mb-4">Quick Links</h4>
           {col3quick.map((l) => (
-            <a key={l} href="#" className="block" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, lineHeight: "28.8512px", color: "#c8922a", margin: "16px 0" }}>
+            <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
               {l}
             </a>
           ))}
-          <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, color: "#fff", marginTop: 32, marginBottom: 16 }}>Get Involved</h4>
+          <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mt-8 mb-4">Get Involved</h4>
           {col3involved.map((l) => (
-            <a key={l} href="#" className="block" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, lineHeight: "28.8512px", color: "#c8922a", margin: "16px 0" }}>
+            <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
               {l}
             </a>
           ))}
@@ -83,8 +71,8 @@ const Footer = () => {
       </div>
 
       {/* Copyright bar */}
-      <div style={{ position: "relative", borderTop: "1px solid rgba(255,255,255,0.1)", padding: "16px 24px" }}>
-        <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontStyle: "italic", fontSize: 16, color: "rgba(255,255,255,0.7)", textAlign: "left", maxWidth: 1280, margin: "0 auto" }}>
+      <div className="relative border-t border-white/10 px-6 sm:px-8 md:px-12 py-4">
+        <p className="font-['Inter',sans-serif] font-light italic text-sm md:text-base text-white/70 text-left max-w-[1280px] mx-auto m-0">
           Copyright © 2025 Maasai Focus Mission. Registered NGO, Kenya.
         </p>
       </div>

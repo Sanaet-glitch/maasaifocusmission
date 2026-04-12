@@ -1,41 +1,19 @@
 const Hero = () => {
   return (
-    <section style={{ width: "100vw", position: "relative", overflow: "hidden" }}>
-      <div style={{ position: "absolute", inset: 0, background: "#3b2008" }} />
-      <div
-        className="relative mx-auto flex"
-        style={{ width: 1280, maxWidth: "100%", paddingTop: 168.641, minHeight: 820.7 }}
-      >
-        <div className="flex flex-col md:flex-row w-full relative" style={{ minHeight: 652.06 }}>
+    <section className="w-screen relative overflow-hidden">
+      <div className="absolute inset-0 bg-[#3b2008]" />
+      <div className="relative mx-auto w-full max-w-[1280px] pt-[100px] md:pt-[130px] lg:pt-[168px]">
+        <div className="flex flex-col md:flex-row w-full relative min-h-[500px] md:min-h-[550px] lg:min-h-[652px]">
           {/* Left Column */}
-          <div className="flex flex-col justify-center w-full md:w-1/2 px-6 md:pl-[88px] md:pr-0">
-            <h1
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontWeight: 900,
-                lineHeight: "78.0595px",
-                letterSpacing: -2.3232,
-                margin: 0,
-              }}
-              className="text-[59.2px] md:text-[77.44px]"
-            >
-              <span style={{ color: "#c8922a" }}>One People.</span>
+          <div className="flex flex-col justify-center w-full md:w-1/2 px-6 sm:px-8 md:pl-10 lg:pl-[88px] md:pr-4 py-10 md:py-16">
+            <h1 className="font-['Playfair_Display',serif] font-black leading-[1.05] tracking-tight m-0 text-[42px] sm:text-[52px] md:text-[60px] lg:text-[77.44px]">
+              <span className="text-[#c8922a]">One People.</span>
               <br />
-              <span style={{ color: "#c8922a" }}>One Purpose.</span>
+              <span className="text-[#c8922a]">One Purpose.</span>
               <br />
-              <span style={{ color: "#ffffff" }}>One God.</span>
+              <span className="text-white">One God.</span>
             </h1>
-            <p
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 300,
-                fontSize: 23.68,
-                lineHeight: "33.152px",
-                color: "#ffffff",
-                marginTop: 16,
-                maxWidth: 500,
-              }}
-            >
+            <p className="font-['Inter',sans-serif] font-light text-white mt-4 max-w-[500px] text-base sm:text-lg md:text-xl lg:text-[23.68px] leading-relaxed">
               Since 2025, Maasai Focus Mission has been walking alongside Maasai
               communities in Kenya, delivering education, healthcare, and
               spiritual transformation across the region.
@@ -43,16 +21,7 @@ const Hero = () => {
             <div className="mt-6">
               <a
                 href="#"
-                style={{
-                  background: "#c8922a",
-                  color: "#2d3a0e",
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 900,
-                  fontSize: 19.84,
-                  padding: "15.872px 33.728px",
-                  borderRadius: 300,
-                  display: "inline-block",
-                }}
+                className="bg-[#c8922a] text-[#2d3a0e] font-['Inter',sans-serif] font-black text-base md:text-lg lg:text-[19.84px] px-6 md:px-8 py-3 md:py-4 rounded-full inline-block"
               >
                 Learn Our Story
               </a>
@@ -60,23 +29,26 @@ const Hero = () => {
           </div>
 
           {/* Right Column */}
-          <div className="relative w-full md:w-1/2 flex items-center justify-center" style={{ minHeight: 400 }}>
+          <div className="relative w-full md:w-1/2 flex items-center justify-center min-h-[300px] sm:min-h-[350px] md:min-h-[400px]">
+            {/* Gold ring - bleeds off right edge */}
             <div
-              className="hidden md:block absolute"
-              style={{ width: 540, height: 540, borderRadius: "50%", background: "#c8922a", right: -250, top: 20, zIndex: 0 }}
+              className="hidden md:block absolute rounded-full bg-[#c8922a] z-0"
+              style={{ width: 540, height: 540, right: -250, top: 20 }}
             />
+            {/* Mobile gold ring */}
             <div
-              className="w-[310px] h-[310px] md:w-[420px] md:h-[420px] relative z-10"
-              style={{ borderRadius: "50%", overflow: "hidden", background: "#6b6b1a" }}
+              className="md:hidden absolute rounded-full bg-[#c8922a] z-0"
+              style={{ width: 350, height: 350, right: -120, top: 0 }}
             />
+            <div className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] relative z-10 rounded-full overflow-hidden bg-[#6b6b1a]" />
           </div>
         </div>
       </div>
 
       {/* Color Strips */}
-      <div className="relative w-full" style={{ height: 47 }}>
-        <div style={{ position: "absolute", inset: 0, background: "#c8922a" }} />
-        <div style={{ position: "absolute", left: 0, top: 0, width: "50%", height: "100%", background: "#4a5e1f" }} />
+      <div className="relative w-full h-[47px]">
+        <div className="absolute inset-0 bg-[#c8922a]" />
+        <div className="absolute left-0 top-0 w-1/2 h-full bg-[#4a5e1f]" />
       </div>
     </section>
   );

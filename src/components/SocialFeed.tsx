@@ -9,121 +9,62 @@ const posts = [
 
 const SocialFeed = () => {
   return (
-    <section style={{ width: "100vw", position: "relative" }}>
-      <div style={{ position: "absolute", inset: 0, background: "#ffffff" }} />
-      <div
-        style={{
-          position: "relative",
-          width: 1280,
-          maxWidth: "100%",
-          margin: "0 auto",
-          padding: "60px 24px",
-        }}
-      >
-        <h3
-          style={{
-            fontFamily: "'Playfair Display', serif",
-            fontWeight: 900,
-            fontSize: 37.504,
-            lineHeight: "42.4845px",
-            color: "#2d3a0e",
-            textAlign: "center",
-            marginBottom: 32,
-          }}
-        >
+    <section className="w-screen relative">
+      <div className="absolute inset-0 bg-white" />
+      <div className="relative mx-auto w-full max-w-[1280px] px-6 sm:px-8 md:px-12 py-12 md:py-16">
+        <h3 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-center mb-8 text-2xl sm:text-3xl md:text-[33px] lg:text-[37.504px] leading-tight">
           Facebook Feed
         </h3>
 
         {/* Feed header */}
         <div className="max-w-[600px] mx-auto mb-8">
           <div className="flex items-center gap-3 mb-3">
-            <div style={{ width: 43, height: 43, borderRadius: "50%", background: "#2d3a0e" }} />
+            <div className="w-10 h-10 md:w-[43px] md:h-[43px] rounded-full bg-[#2d3a0e] flex-shrink-0" />
             <div>
-              <a href="#" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: 18, color: "#555" }}>
+              <a href="#" className="font-['Inter',sans-serif] font-semibold text-base md:text-lg text-[#555]">
                 Maasai Focus Mission
               </a>
-              <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 16, color: "#555", margin: 0 }}>
+              <p className="font-['Inter',sans-serif] font-light text-sm md:text-base text-[#555] m-0">
                 500+ followers
               </p>
             </div>
           </div>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 16, lineHeight: "22.4px", color: "#555", marginBottom: 16 }}>
+          <p className="font-['Inter',sans-serif] font-light text-sm md:text-base text-[#555] leading-relaxed mb-4">
             Maasai Focus Mission is a registered NGO walking alongside Maasai communities in Kenya.
           </p>
-          <div className="flex gap-3">
-            <button
-              style={{
-                padding: "10px 12px",
-                borderRadius: 8,
-                background: "#2d3a0e",
-                color: "#fff",
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 600,
-                fontSize: 14,
-                border: "none",
-                cursor: "pointer",
-              }}
-            >
+          <div className="flex flex-wrap gap-3">
+            <button className="px-3 py-2.5 rounded-lg bg-[#2d3a0e] text-white font-['Inter',sans-serif] font-semibold text-xs sm:text-sm border-none cursor-pointer">
               Follow Us on Facebook
             </button>
-            <button
-              style={{
-                padding: "10px 12px",
-                borderRadius: 8,
-                background: "transparent",
-                border: "1px solid #2d3a0e",
-                color: "#2d3a0e",
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 600,
-                fontSize: 14,
-                cursor: "pointer",
-              }}
-            >
+            <button className="px-3 py-2.5 rounded-lg bg-transparent border border-[#2d3a0e] text-[#2d3a0e] font-['Inter',sans-serif] font-semibold text-xs sm:text-sm cursor-pointer">
               View our website
             </button>
           </div>
         </div>
 
         {/* Posts grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[900px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[900px] mx-auto">
           {posts.map((post, i) => (
             <div
               key={i}
-              style={{
-                background: "#fff",
-                border: "1px solid #e5e5e5",
-                borderRadius: 6,
-                padding: 16,
-              }}
+              className="bg-white border border-[#e5e5e5] rounded-md p-4"
             >
               <div className="flex items-center gap-2 mb-3">
-                <div style={{ width: 43, height: 43, borderRadius: "50%", background: "#2d3a0e" }} />
-                <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: 16, color: "#555" }}>
+                <div className="w-8 h-8 md:w-[43px] md:h-[43px] rounded-full bg-[#2d3a0e] flex-shrink-0" />
+                <span className="font-['Inter',sans-serif] font-semibold text-sm md:text-base text-[#555]">
                   Maasai Focus Mission
                 </span>
               </div>
-              <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 16, lineHeight: "22.4px", color: "#555", marginBottom: 12 }}>
+              <p className="font-['Inter',sans-serif] font-light text-sm md:text-base text-[#555] leading-relaxed mb-3">
                 {post.text}
               </p>
               <div
-                className="flex items-center justify-center"
-                style={{
-                  width: 223,
-                  height: 193,
-                  background: post.color,
-                  color: "#fff",
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 600,
-                  fontSize: 12,
-                  textAlign: "center",
-                }}
+                className="flex items-center justify-center w-full sm:w-[223px] h-[150px] sm:h-[193px] text-white font-['Inter',sans-serif] font-semibold text-xs text-center"
+                style={{ background: post.color }}
               >
                 {post.label}
               </div>
-              <div
-                className="flex justify-between mt-3"
-                style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 14, color: "#555" }}
-              >
+              <div className="flex justify-between mt-3 font-['Inter',sans-serif] font-light text-xs md:text-sm text-[#555]">
                 <span>👍 Like</span>
                 <span>💬 Comment</span>
                 <span>↗ Share</span>
@@ -133,19 +74,7 @@ const SocialFeed = () => {
         </div>
 
         <div className="text-center mt-8">
-          <button
-            style={{
-              padding: "10px 32px",
-              borderRadius: 8,
-              border: "1px solid #2d3a0e",
-              background: "transparent",
-              color: "#2d3a0e",
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: 600,
-              fontSize: 14,
-              cursor: "pointer",
-            }}
-          >
+          <button className="px-8 py-2.5 rounded-lg border border-[#2d3a0e] bg-transparent text-[#2d3a0e] font-['Inter',sans-serif] font-semibold text-sm cursor-pointer">
             Load More
           </button>
         </div>

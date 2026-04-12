@@ -1,78 +1,29 @@
 const stats = [
-  { number: "3,000+", label: "community members in our region", fontSize: 86.8 },
-  { number: "5+", label: "active community development programs", fontSize: 93.3 },
-  { number: "100%", label: "of funds go directly to the field", fontSize: 68.9 },
+  { number: "3,000+", label: "community members in our region" },
+  { number: "5+", label: "active community development programs" },
+  { number: "100%", label: "of funds go directly to the field" },
 ];
 
 const Stats = () => {
   return (
-    <section style={{ width: "100vw", position: "relative" }}>
-      <div style={{ position: "absolute", inset: 0, background: "#ffffff" }} />
-      <div
-        style={{
-          position: "relative",
-          width: 1280,
-          maxWidth: "100%",
-          margin: "0 auto",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          minHeight: 662.5,
-          padding: "60px 24px",
-        }}
-      >
-        <h3
-          style={{
-            fontFamily: "'Playfair Display', serif",
-            fontWeight: 900,
-            fontSize: 37.504,
-            lineHeight: "42.4845px",
-            textAlign: "center",
-            marginBottom: 32,
-          }}
-        >
-          <span style={{ color: "#b5411a" }}>The Maasai community</span>{" "}
-          <span style={{ color: "#2d3a0e" }}>deserves dignity and hope.</span>
+    <section className="w-screen relative">
+      <div className="absolute inset-0 bg-white" />
+      <div className="relative mx-auto w-full max-w-[1280px] flex flex-col items-center justify-center min-h-[400px] md:min-h-[550px] lg:min-h-[662px] px-6 sm:px-8 md:px-12 py-12 md:py-16">
+        <h3 className="font-['Playfair_Display',serif] font-black text-center mb-6 md:mb-8 text-2xl sm:text-3xl md:text-[33px] lg:text-[37.504px] leading-tight">
+          <span className="text-[#b5411a]">The Maasai community</span>{" "}
+          <span className="text-[#2d3a0e]">deserves dignity and hope.</span>
         </h3>
-        <p
-          style={{
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 300,
-            fontSize: 23.68,
-            lineHeight: "33.152px",
-            color: "#2d3a0e",
-            textAlign: "center",
-            marginTop: 16,
-          }}
-        >
+        <p className="font-['Inter',sans-serif] font-light text-[#2d3a0e] text-center mt-2 md:mt-4 text-base sm:text-lg md:text-xl lg:text-[23.68px] leading-relaxed max-w-3xl">
           Every contribution directly transforms lives in Kenya's Maasai communities.
         </p>
 
-        <div className="flex flex-col md:flex-row justify-around items-start w-full mt-12 gap-12 md:gap-0">
+        <div className="flex flex-col sm:flex-row justify-around items-center sm:items-start w-full mt-10 md:mt-12 gap-10 sm:gap-6 md:gap-0">
           {stats.map((stat, i) => (
             <div key={i} className="text-center flex-1">
-              <div
-                style={{
-                  fontFamily: "'Playfair Display', serif",
-                  fontWeight: 900,
-                  fontSize: stat.fontSize,
-                  lineHeight: `${stat.fontSize}px`,
-                  color: "#c8922a",
-                }}
-              >
+              <div className="font-['Playfair_Display',serif] font-black text-[#c8922a] text-[50px] sm:text-[60px] md:text-[70px] lg:text-[86px] leading-none">
                 {stat.number}
               </div>
-              <div
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 300,
-                  fontSize: 23.68,
-                  lineHeight: "33.152px",
-                  color: "#2d3a0e",
-                  marginTop: 0,
-                }}
-              >
+              <div className="font-['Inter',sans-serif] font-light text-[#2d3a0e] text-base sm:text-lg md:text-xl lg:text-[23.68px] leading-relaxed mt-1">
                 {stat.label}
               </div>
             </div>
