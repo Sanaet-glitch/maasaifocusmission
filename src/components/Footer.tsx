@@ -23,7 +23,6 @@ const Footer = () => {
         {/* Contact */}
         <div>
           <img src="assets/logo.png" alt="Maasai Focus Mission" style={{ height: 65, objectFit: "contain", marginBottom: 16 }} />
-          </div>
           <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, color: "#fff" }}>
             Questions?{" "}
             <a href="#" style={{ color: "#c8922a" }}>
