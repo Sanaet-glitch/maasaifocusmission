@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section style={{ width: "100vw", position: "relative" }}>
+    <section style={{ width: "100vw", position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", inset: 0, background: "#3b2008" }} />
       <div
         className="relative mx-auto flex"
@@ -63,7 +63,7 @@ const Hero = () => {
           <div className="relative w-full md:w-1/2 flex items-center justify-center" style={{ minHeight: 400 }}>
             <div
               className="hidden md:block absolute"
-              style={{ width: 540, height: 540, borderRadius: "50%", background: "#c8922a", right: -80, top: 20, zIndex: 0 }}
+              style={{ width: 540, height: 540, borderRadius: "50%", background: "#c8922a", right: -250, top: 20, zIndex: 0 }}
             />
             <div
               className="w-[310px] h-[310px] md:w-[420px] md:h-[420px] relative z-10"

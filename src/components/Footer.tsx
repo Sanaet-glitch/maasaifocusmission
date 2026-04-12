@@ -22,17 +22,7 @@ const Footer = () => {
       >
         {/* Contact */}
         <div>
-          <div
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 900,
-              fontSize: 22,
-              color: "#c8922a",
-              marginBottom: 16,
-              lineHeight: 1.1,
-            }}
-          >
-            MAASAI FOCUS MISSION
+          <img src="assets/logo.png" alt="Maasai Focus Mission" style={{ height: 65, objectFit: "contain", marginBottom: 16 }} />
           </div>
           <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: 20.608, color: "#fff" }}>
             Questions?{" "}
