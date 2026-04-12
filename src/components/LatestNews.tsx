@@ -1,71 +1,31 @@
 const cards = [
-  { title: "Building the First Community Library in Kajiado", color: "#c8922a", h: 220.5 },
-  { title: "Mobile Clinic Reaches 200 Families This Quarter", color: "#b5411a", h: 220.5 },
-  { title: "Community Dedication Service — March 2025", color: "#4a5e1f", h: 209.7 },
+  { title: "Building the First Community Library in Kajiado", color: "#c8922a", h: 220 },
+  { title: "Mobile Clinic Reaches 200 Families This Quarter", color: "#b5411a", h: 220 },
+  { title: "Community Dedication Service — March 2025", color: "#4a5e1f", h: 210 },
 ];
 
 const LatestNews = () => {
   return (
-    <section style={{ width: "100vw", position: "relative" }}>
-      <div style={{ position: "absolute", inset: 0, background: "#ffffff" }} />
-      <div
-        style={{
-          position: "relative",
-          width: 1280,
-          maxWidth: "100%",
-          margin: "0 auto",
-          minHeight: 609.48,
-          padding: "60px 24px",
-        }}
-      >
-        <h3
-          style={{
-            fontFamily: "'Playfair Display', serif",
-            fontWeight: 900,
-            fontSize: 37.504,
-            lineHeight: "42.4845px",
-            color: "#2d3a0e",
-            textAlign: "center",
-            margin: 0,
-            marginBottom: 40,
-          }}
-        >
+    <section className="w-screen relative">
+      <div className="absolute inset-0 bg-white" />
+      <div className="relative mx-auto w-full max-w-[1280px] px-6 sm:px-8 md:px-12 py-12 md:py-16">
+        <h3 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-center mb-8 md:mb-10 text-2xl sm:text-3xl md:text-[33px] lg:text-[37.504px] leading-tight">
           Latest News
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {cards.map((card, i) => (
             <div key={i} className="overflow-hidden">
-              <div
-                style={{
-                  width: "100%",
-                  height: card.h,
-                  background: card.color,
-                }}
-              />
+              <div className="w-full h-[180px] sm:h-[200px] md:h-[220px]" style={{ background: card.color }} />
               <a
                 href="#"
-                className="block"
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 300,
-                  fontSize: 23.68,
-                  lineHeight: "33.152px",
-                  color: "#2d3a0e",
-                  padding: "16px 8px 4px",
-                }}
+                className="block font-['Inter',sans-serif] font-light text-[#2d3a0e] pt-4 px-1 text-base sm:text-lg md:text-xl lg:text-[23.68px] leading-relaxed"
               >
                 {card.title}
               </a>
               <a
                 href="#"
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  fontWeight: 300,
-                  fontSize: 14,
-                  color: "#b5411a",
-                  padding: "0 8px",
-                }}
+                className="font-['Inter',sans-serif] font-light text-[#b5411a] text-sm px-1"
               >
                 Read More →
               </a>
