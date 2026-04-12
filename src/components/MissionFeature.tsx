@@ -10,9 +10,9 @@ const MissionFeature = () => {
         <div className="hidden md:block relative" style={{ minHeight: 478.02 }}>
           <div style={{ position: "absolute", width: 493.2, height: 430.21, background: "#6b6b1a", left: 27, top: 0 }} />
           <div style={{ position: "absolute", width: 165.6, height: 149.53, background: "#4a5e1f", left: 460, top: 8 }} />
-          <div style={{ position: "absolute", width: 203.4, height: 196.31, background: "#2d3a0e", left: 1052, top: 202 }} />
+          <div style={{ position: "absolute", width: 203.4, height: 196.31, background: "#2d3a0e", left: 1052, bottom: 0, zIndex: 0 }} />
 
-          <div style={{ position: "absolute", left: 633, top: 47, width: 544 }}>
+          <div style={{ position: "absolute", left: 633, top: 47, width: 544, zIndex: 1 }}>
             <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, fontSize: 37.504, lineHeight: "42.4845px", color: "#ffffff", margin: 0 }}>
               Rooted in community. Driven by faith. Maasai Focus Mission walks alongside the Maasai people — building lasting change from within.
             </h3>

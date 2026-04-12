@@ -1,28 +1,23 @@
 const Disclosure = () => {
   return (
-    <section style={{ width: "100vw", position: "relative" }}>
-      <div style={{ position: "absolute", inset: 0, background: "#ffffff" }} />
+    <section style={{ width: "100vw", position: "relative", background: "#ffffff", borderTop: "1px solid #e5e5e5" }}>
       <div
         style={{
-          position: "relative",
           width: 1280,
           maxWidth: "100%",
           margin: "0 auto",
-          minHeight: 127.94,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "30px 40px",
+          padding: "40px 88px",
         }}
       >
         <p
           style={{
             fontFamily: "'Inter', sans-serif",
             fontWeight: 300,
-            fontSize: 20.608,
-            lineHeight: "28.8512px",
+            fontSize: 16,
+            lineHeight: "24px",
             color: "#2d3a0e",
             textAlign: "center",
+            margin: 0,
           }}
         >
           © 2025 All Rights Reserved Maasai Focus Mission. Registered NGO, Kenya. This website

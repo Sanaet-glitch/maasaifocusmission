@@ -30,9 +30,7 @@ const Navbar = () => {
             alignItems: "center",
           }}
         >
-          <span style={{ fontWeight: 900, fontSize: 24, lineHeight: 1.1 }}>
-            MAASAI<br />FOCUS<br />MISSION
-          </span>
+          <img src="assets/logo.png" alt="Maasai Focus Mission" style={{ height: 65, objectFit: "contain" }} />
         </div>
 
         {/* Desktop Nav */}
