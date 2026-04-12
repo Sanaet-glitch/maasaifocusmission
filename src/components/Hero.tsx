@@ -1,36 +1,18 @@
 const Hero = () => {
   return (
     <section style={{ width: "100vw", position: "relative" }}>
+      <div style={{ position: "absolute", inset: 0, background: "#3b2008" }} />
       <div
-        className="section-border"
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: "#3b2008",
-        }}
-      />
-      <div
-        style={{
-          position: "relative",
-          width: 1280,
-          maxWidth: "100%",
-          margin: "0 auto",
-          display: "flex",
-          paddingTop: 168.641,
-          minHeight: 820.7,
-        }}
+        className="relative mx-auto flex"
+        style={{ width: 1280, maxWidth: "100%", paddingTop: 168.641, minHeight: 820.7 }}
       >
-        <div className="flex flex-col md:flex-row w-full" style={{ position: "relative", minHeight: 652.06 }}>
+        <div className="flex flex-col md:flex-row w-full relative" style={{ minHeight: 652.06 }}>
           {/* Left Column */}
-          <div
-            className="flex flex-col justify-center w-full md:w-1/2 px-6 md:px-0"
-            style={{ paddingLeft: window.innerWidth >= 768 ? 88 : undefined }}
-          >
+          <div className="flex flex-col justify-center w-full md:w-1/2 px-6 md:pl-[88px] md:pr-0">
             <h1
               style={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 900,
-                fontSize: 77.44,
                 lineHeight: "78.0595px",
                 letterSpacing: -2.3232,
                 margin: 0,
@@ -77,41 +59,22 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column — Circle Composition */}
+          {/* Right Column */}
           <div className="relative w-full md:w-1/2 flex items-center justify-center" style={{ minHeight: 400 }}>
-            {/* Outer Gold Ring */}
             <div
-              className="hidden md:block"
-              style={{
-                position: "absolute",
-                width: 540,
-                height: 540,
-                borderRadius: "50%",
-                background: "#c8922a",
-                right: -80,
-                top: 20,
-                zIndex: 0,
-              }}
+              className="hidden md:block absolute"
+              style={{ width: 540, height: 540, borderRadius: "50%", background: "#c8922a", right: -80, top: 20, zIndex: 0 }}
             />
-            {/* Inner Image Circle */}
             <div
-              style={{
-                width: 420,
-                height: 420,
-                borderRadius: "50%",
-                overflow: "hidden",
-                position: "relative",
-                zIndex: 10,
-                background: "#6b6b1a",
-              }}
-              className="w-[310px] h-[310px] md:w-[420px] md:h-[420px]"
+              className="w-[310px] h-[310px] md:w-[420px] md:h-[420px] relative z-10"
+              style={{ borderRadius: "50%", overflow: "hidden", background: "#6b6b1a" }}
             />
           </div>
         </div>
       </div>
 
       {/* Color Strips */}
-      <div style={{ position: "relative", height: 47, width: "100%" }}>
+      <div className="relative w-full" style={{ height: 47 }}>
         <div style={{ position: "absolute", inset: 0, background: "#c8922a" }} />
         <div style={{ position: "absolute", left: 0, top: 0, width: "50%", height: "100%", background: "#4a5e1f" }} />
       </div>
