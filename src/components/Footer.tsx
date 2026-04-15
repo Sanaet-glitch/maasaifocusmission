@@ -1,6 +1,13 @@
 import { Facebook, Twitter, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const col1 = ["Who We Are", "Our Mission, Vision & Values", "Our Team", "Board of Directors", "Collaborations"];
+const col1 = [
+  { label: "Who We Are", to: "/about" },
+  { label: "Our Mission, Vision & Values", to: "/about" },
+  { label: "Our Team", to: "#" },
+  { label: "Board of Directors", to: "#" },
+  { label: "Collaborations", to: "#" },
+];
 const col2 = ["Education", "Healthcare", "Livelihoods", "Community Development", "School Outreach", "Cultural Programs", "Recruitment"];
 const col3quick = ["Members Portal", "Find Us", "Careers", "Accountability Statement"];
 const col3involved = ["Donate", "Volunteer", "Partner With Us", "News"];
@@ -37,9 +44,9 @@ const Footer = () => {
         <div>
           <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mb-4">About</h4>
           {col1.map((l) => (
-            <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
-              {l}
-            </a>
+            <Link key={l.label} to={l.to} className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
+              {l.label}
+            </Link>
           ))}
         </div>
 
