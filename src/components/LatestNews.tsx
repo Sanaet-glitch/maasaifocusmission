@@ -1,7 +1,7 @@
 const cards = [
-  { title: "Building the First Community Library in Kajiado", color: "#c8922a", h: 220 },
-  { title: "Mobile Clinic Reaches 200 Families This Quarter", color: "#b5411a", h: 220 },
-  { title: "Community Dedication Service — March 2025", color: "#4a5e1f", h: 210 },
+  { title: "Official NGO Registration: A New Chapter for Maasai Focus", color: "#c8922a", h: 220 },
+  { title: "Preserving Our Heritage Through Education Outreach", color: "#b5411a", h: 220 },
+  { title: "Community Health Initiative: Planning for 2026", color: "#4a5e1f", h: 210 },
 ];
 
 const LatestNews = () => {

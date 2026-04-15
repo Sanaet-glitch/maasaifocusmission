@@ -7,21 +7,20 @@ const Hero = () => {
           {/* Left Column */}
           <div className="flex flex-col justify-center w-full md:w-1/2 px-6 sm:px-8 md:pl-10 lg:pl-[88px] md:pr-4 py-10 md:py-16">
             <h1 className="font-['Playfair_Display',serif] font-black leading-[1.05] tracking-tight m-0 text-[42px] sm:text-[52px] md:text-[60px] lg:text-[77.44px]">
-              <span className="text-[#c8922a]">One People.</span>
+              <span className="text-[#c8922a]">Our Roots.</span>
               <br />
-              <span className="text-[#c8922a]">One Purpose.</span>
+              <span className="text-[#c8922a]">Our Culture.</span>
               <br />
-              <span className="text-white">One God.</span>
+              <span className="text-white">Our People.</span>
             </h1>
             <p className="font-['Inter',sans-serif] font-light text-white mt-4 max-w-[500px] text-base sm:text-lg md:text-xl lg:text-[23.68px] leading-relaxed">
-              Since 2025, Maasai Focus Mission has been walking alongside Maasai
-              communities in Kenya, delivering education, healthcare, and
-              spiritual transformation across the region.
+              Empowering Maasai communities through education and sensitization,
+              sustainable healthcare, and holistic community transformation since 2025.
             </p>
             <div className="mt-6">
               <a
                 href="#"
-                className="bg-[#c8922a] text-[#2d3a0e] font-['Inter',sans-serif] font-black text-base md:text-lg lg:text-[19.84px] px-6 md:px-8 py-3 md:py-4 rounded-full inline-block"
+                className="bg-[#c8922a] text-[#2d3a0e] font-['Inter',sans-serif] font-black text-base md:text-lg lg:text-[19.84px] px-6 md:px-8 py-3 md:py-4 rounded-full inline-block hover:opacity-90 transition-opacity"
               >
                 Learn Our Story
               </a>

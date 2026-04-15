@@ -12,7 +12,7 @@ const MissionFeature = () => {
           <div className="absolute z-10 right-6 lg:right-12 xl:right-0 top-12 w-full max-w-[520px]" style={{ left: 'auto', marginLeft: 'auto', marginRight: '2%' }}>
             <div className="xl:ml-0" style={{ paddingLeft: 0 }}>
               <h3 className="font-['Playfair_Display',serif] font-black text-white m-0 text-2xl md:text-[30px] lg:text-[37.504px] leading-tight">
-                Rooted in community. Driven by faith. Maasai Focus Mission walks alongside the Maasai people — building lasting change from within.
+                Rooted in community. Driven by heritage. Maasai Focus walks alongside the Maasai people — building lasting change from within.
               </h3>
               <p className="font-['Inter',sans-serif] font-light text-[#2d3a0e] mt-4 text-base md:text-lg lg:text-[20.608px] leading-relaxed">
                 Discover how we work and where your support goes.
@@ -30,7 +30,7 @@ const MissionFeature = () => {
         <div className="md:hidden p-6 sm:p-8">
           <div className="mx-auto w-full max-w-[400px] h-[200px] sm:h-[240px] bg-[#6b6b1a]" />
           <h3 className="font-['Playfair_Display',serif] font-black text-white mt-6 text-xl sm:text-2xl leading-tight">
-            Rooted in community. Driven by faith. Maasai Focus Mission walks alongside the Maasai people — building lasting change from within.
+            Rooted in community. Driven by heritage. Maasai Focus walks alongside the Maasai people — building lasting change from within.
           </h3>
           <p className="font-['Inter',sans-serif] font-light text-[#2d3a0e] mt-3 text-base sm:text-lg">
             Discover how we work and where your support goes.

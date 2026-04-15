@@ -1,7 +1,7 @@
 import { Facebook, Twitter, Youtube } from "lucide-react";
 
 const col1 = ["Who We Are", "Our Mission, Vision & Values", "Our Team", "Board of Directors", "Collaborations"];
-const col2 = ["Education", "Healthcare", "Livelihoods", "Community Development", "School Outreach", "Discipleship", "Recruitment"];
+const col2 = ["Education", "Healthcare", "Livelihoods", "Community Development", "School Outreach", "Cultural Programs", "Recruitment"];
 const col3quick = ["Members Portal", "Find Us", "Careers", "Accountability Statement"];
 const col3involved = ["Donate", "Volunteer", "Partner With Us", "News"];
 
@@ -73,7 +73,7 @@ const Footer = () => {
       {/* Copyright bar */}
       <div className="relative border-t border-white/10 px-6 sm:px-8 md:px-12 py-4">
         <p className="font-['Inter',sans-serif] font-light italic text-sm md:text-base text-white/70 text-left max-w-[1280px] mx-auto m-0">
-          Copyright © 2025 Maasai Focus Mission. Registered NGO, Kenya.
+          Maasai Focus Mission is a registered NGO in the Republic of Kenya. © 2025
         </p>
       </div>
     </footer>
