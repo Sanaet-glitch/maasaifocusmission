@@ -9,7 +9,12 @@ const col1 = [
   { label: "Collaborations", to: "#" },
 ];
 const col2 = ["Education", "Healthcare", "Livelihoods", "Community Development", "School Outreach", "Cultural Programs", "Recruitment"];
-const col3quick = ["Members Portal", "Find Us", "Careers", "Accountability Statement"];
+const col3quick = [
+  { label: "Members Portal", to: "#" },
+  { label: "Find Us", to: "/contact" },
+  { label: "Careers", to: "#" },
+  { label: "Accountability Statement", to: "/contact" },
+];
 const col3involved = ["Donate", "Volunteer", "Partner With Us", "News"];
 
 const Footer = () => {
@@ -22,7 +27,7 @@ const Footer = () => {
           <img src="assets/logo.png" alt="Maasai Focus Mission" className="h-12 md:h-[65px] object-contain mb-4" />
           <p className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white">
             Questions?{" "}
-            <a href="#" className="text-[#c8922a]">Contact Us</a>
+            <Link to="/contact" className="text-[#c8922a]">Contact Us</Link>
           </p>
           <p className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white my-3 md:my-4">
             P.O. Box XXXX, Kajiado, Kenya
@@ -54,20 +59,23 @@ const Footer = () => {
         <div>
           <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mb-4">Programs & Services</h4>
           {col2.map((l) => (
-            <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
+            <Link key={l} to="/programs" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
               {l}
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* Quick Links + Get Involved */}
         <div>
           <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mb-4">Quick Links</h4>
-          {col3quick.map((l) => (
-            <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
-              {l}
-            </a>
-          ))}
+          {col3quick.map((l) => {
+            const Comp = l.to.startsWith("/") ? Link : "a";
+            return (
+              <Comp key={l.label} to={l.to as any} href={l.to.startsWith("/") ? undefined : l.to} className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
+                {l.label}
+              </Comp>
+            );
+          })}
           <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mt-8 mb-4">Get Involved</h4>
           {col3involved.map((l) => (
             <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">

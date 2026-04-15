@@ -4,6 +4,8 @@ import { Menu, X, Accessibility } from "lucide-react";
 
 const linkMap: Record<string, string> = {
   About: "/about",
+  Programs: "/programs",
+  "Find Us": "/contact",
 };
 
 const navRow1 = ["About", "Our Work", "Programs", "Stories", "News"];
