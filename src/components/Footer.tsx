@@ -68,11 +68,14 @@ const Footer = () => {
         {/* Quick Links + Get Involved */}
         <div>
           <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mb-4">Quick Links</h4>
-          {col3quick.map((l) => (
-            <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
-              {l}
-            </a>
-          ))}
+          {col3quick.map((l) => {
+            const Comp = l.to.startsWith("/") ? Link : "a";
+            return (
+              <Comp key={l.label} to={l.to as any} href={l.to.startsWith("/") ? undefined : l.to} className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
+                {l.label}
+              </Comp>
+            );
+          })}
           <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mt-8 mb-4">Get Involved</h4>
           {col3involved.map((l) => (
             <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
