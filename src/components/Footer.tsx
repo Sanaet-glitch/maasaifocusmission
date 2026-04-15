@@ -59,9 +59,9 @@ const Footer = () => {
         <div>
           <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mb-4">Programs & Services</h4>
           {col2.map((l) => (
-            <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
+            <Link key={l} to="/programs" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
               {l}
-            </a>
+            </Link>
           ))}
         </div>
 
