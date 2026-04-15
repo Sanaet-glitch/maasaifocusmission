@@ -1,10 +1,21 @@
+import { Link } from "react-router-dom";
+
 const posts = [
-  { text: "April 2025 — Join us every Sunday for community prayer and fellowship in Kajiado. Together we grow stronger in faith.", color: "#b5411a", label: "COMMUNITY PRAYER SUNDAY" },
-  { text: "April 2025 — Our education team visited 3 schools this week. The children are thriving.", color: "#c8922a", label: "EDUCATION OUTREACH WEEK" },
-  { text: "March 2025 — Volunteer spotlight: meet Grace, who has dedicated 2 years to our mobile health clinic.", color: "#4a5e1f", label: "" },
-  { text: "March 2025 — Thank you to all our donors who made the mobile clinic possible this quarter.", color: "#2d3a0e", label: "NATIONAL DOCTORS DAY" },
-  { text: "March 2025 — Construction begins on the new community hall in Amboseli region.", color: "#6b6b1a", label: "COMMUNITY HALL PROJECT" },
-  { text: "March 2025 — Spring appeal: help us reach 500 more Maasai families before end of year.", color: "#b5411a", label: "YEAR-END APPEAL 2025" },
+  {
+    title: "Supporting Our Students",
+    text: "Before we were an official NGO, we were just neighbors helping neighbors. We are currently walking with a few students to ensure they stay in school.",
+    color: "#c8922a",
+  },
+  {
+    title: "A Visit to a Family",
+    text: "Recently, we were able to share some essential food items with a family in our community. It was a small gesture, but it reminded us why we started.",
+    color: "#4a5e1f",
+  },
+  {
+    title: "A New Chapter (2026)",
+    text: "Our recent registration is just a tool to help us do this work better. We are still the same people, just with a formal commitment to our community.",
+    color: "#2d3a0e",
+  },
 ];
 
 const SocialFeed = () => {
@@ -13,7 +24,7 @@ const SocialFeed = () => {
       <div className="absolute inset-0 bg-white" />
       <div className="relative mx-auto w-full max-w-[1280px] px-6 sm:px-8 md:px-12 py-12 md:py-16">
         <h3 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-center mb-8 text-2xl sm:text-3xl md:text-[33px] lg:text-[37.504px] leading-tight">
-          Facebook Feed
+          Our Journey So Far
         </h3>
 
         {/* Feed header */}
@@ -21,11 +32,11 @@ const SocialFeed = () => {
           <div className="flex items-center gap-3 mb-3">
             <div className="w-10 h-10 md:w-[43px] md:h-[43px] rounded-full bg-[#2d3a0e] flex-shrink-0" />
             <div>
-              <a href="#" className="font-['Inter',sans-serif] font-semibold text-base md:text-lg text-[#555]">
+              <span className="font-['Inter',sans-serif] font-semibold text-base md:text-lg text-[#555]">
                 Maasai Focus Mission
-              </a>
+              </span>
               <p className="font-['Inter',sans-serif] font-light text-sm md:text-base text-[#555] m-0">
-                500+ followers
+                Walking alongside Maasai communities
               </p>
             </div>
           </div>
@@ -33,9 +44,12 @@ const SocialFeed = () => {
             Maasai Focus Mission is a registered NGO walking alongside Maasai communities in Kenya.
           </p>
           <div className="flex flex-wrap gap-3">
-            <button className="px-3 py-2.5 rounded-lg bg-[#2d3a0e] text-white font-['Inter',sans-serif] font-semibold text-xs sm:text-sm border-none cursor-pointer">
-              Follow Us on Facebook
-            </button>
+            <Link
+              to="/about"
+              className="px-3 py-2.5 rounded-lg bg-[#2d3a0e] text-white font-['Inter',sans-serif] font-semibold text-xs sm:text-sm no-underline"
+            >
+              Our Story
+            </Link>
             <button className="px-3 py-2.5 rounded-lg bg-transparent border border-[#2d3a0e] text-[#2d3a0e] font-['Inter',sans-serif] font-semibold text-xs sm:text-sm cursor-pointer">
               View our website
             </button>
@@ -43,40 +57,26 @@ const SocialFeed = () => {
         </div>
 
         {/* Posts grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[900px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[900px] mx-auto">
           {posts.map((post, i) => (
             <div
               key={i}
               className="bg-white border border-[#e5e5e5] rounded-md p-4"
             >
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-8 h-8 md:w-[43px] md:h-[43px] rounded-full bg-[#2d3a0e] flex-shrink-0" />
-                <span className="font-['Inter',sans-serif] font-semibold text-sm md:text-base text-[#555]">
-                  Maasai Focus Mission
-                </span>
-              </div>
-              <p className="font-['Inter',sans-serif] font-light text-sm md:text-base text-[#555] leading-relaxed mb-3">
-                {post.text}
-              </p>
               <div
-                className="flex items-center justify-center w-full sm:w-[223px] h-[150px] sm:h-[193px] text-white font-['Inter',sans-serif] font-semibold text-xs text-center"
+                className="flex items-center justify-center w-full h-[150px] sm:h-[180px] text-white font-['Inter',sans-serif] font-semibold text-xs text-center rounded-sm mb-3"
                 style={{ background: post.color }}
               >
-                {post.label}
+                {post.title}
               </div>
-              <div className="flex justify-between mt-3 font-['Inter',sans-serif] font-light text-xs md:text-sm text-[#555]">
-                <span>👍 Like</span>
-                <span>💬 Comment</span>
-                <span>↗ Share</span>
-              </div>
+              <h4 className="font-['Inter',sans-serif] font-semibold text-sm md:text-base text-[#2d3a0e] mb-2">
+                {post.title}
+              </h4>
+              <p className="font-['Inter',sans-serif] font-light text-sm md:text-base text-[#555] leading-relaxed">
+                {post.text}
+              </p>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-8">
-          <button className="px-8 py-2.5 rounded-lg border border-[#2d3a0e] bg-transparent text-[#2d3a0e] font-['Inter',sans-serif] font-semibold text-sm cursor-pointer">
-            Load More
-          </button>
         </div>
       </div>
     </section>

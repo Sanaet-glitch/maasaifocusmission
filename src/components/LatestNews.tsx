@@ -1,7 +1,7 @@
 const cards = [
-  { title: "Official NGO Registration: A New Chapter for Maasai Focus", color: "#c8922a", h: 220 },
-  { title: "Preserving Our Heritage Through Education Outreach", color: "#b5411a", h: 220 },
-  { title: "Community Health Initiative: Planning for 2026", color: "#4a5e1f", h: 210 },
+  { title: "The Story Behind Maasai Focus: Why We Started.", color: "#c8922a" },
+  { title: "Community Support: A Recent Family Visit in Nakuru.", color: "#b5411a" },
+  { title: "Moving Forward: Our 2026 Registration as an NGO.", color: "#4a5e1f" },
 ];
 
 const LatestNews = () => {

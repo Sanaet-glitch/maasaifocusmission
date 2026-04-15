@@ -1,9 +1,28 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, Accessibility } from "lucide-react";
+
+const linkMap: Record<string, string> = {
+  About: "/about",
+};
 
 const navRow1 = ["About", "Our Work", "Programs", "Stories", "News"];
 const navRow2 = ["Trainings & Events", "Careers", "Volunteer", "2025 Community Forum"];
 const navRow3 = ["2025 School Outreach Conference", "Communities of Practice"];
+
+const NavItem = ({ link }: { link: string }) => {
+  const to = linkMap[link];
+  const cls = "text-white no-underline font-['Inter',sans-serif] font-medium text-[15px] xl:text-[19px] py-[2px]";
+  if (to) return <Link to={to} className={cls}>{link}</Link>;
+  return <a href="#" className={cls}>{link}</a>;
+};
+
+const MobileNavItem = ({ link, onClick }: { link: string; onClick: () => void }) => {
+  const to = linkMap[link];
+  const cls = "block text-white font-['Inter',sans-serif] text-lg md:text-xl font-medium leading-tight";
+  if (to) return <Link to={to} className={cls} onClick={onClick}>{link}</Link>;
+  return <a href="#" className={cls}>{link}</a>;
+};
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,11 +32,13 @@ const Navbar = () => {
       <div className="flex items-center justify-between h-full px-4 sm:px-6 md:px-10 lg:px-[88px]">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <img
-            src="assets/logo.png"
-            alt="Maasai Focus Mission"
-            className="h-10 md:h-[50px] lg:h-[65px] object-contain"
-          />
+          <Link to="/">
+            <img
+              src="/assets/logo.png"
+              alt="Maasai Focus Mission"
+              className="h-10 md:h-[50px] lg:h-[65px] object-contain"
+            />
+          </Link>
         </div>
 
         {/* Desktop Nav */}
@@ -25,13 +46,7 @@ const Navbar = () => {
           {[navRow1, navRow2, navRow3].map((row, ri) => (
             <div key={ri} className="flex flex-wrap gap-x-[20px] gap-y-[8px] justify-center">
               {row.map((link) => (
-                <a
-                  key={link}
-                  href="#"
-                  className="text-white no-underline font-['Inter',sans-serif] font-medium text-[15px] xl:text-[19px] py-[2px]"
-                >
-                  {link}
-                </a>
+                <NavItem key={link} link={link} />
               ))}
             </div>
           ))}
@@ -64,13 +79,7 @@ const Navbar = () => {
         <div className="lg:hidden absolute top-full left-0 w-full bg-[#2d3a0e] px-6 py-6 md:px-10 md:py-8 max-h-[70vh] overflow-y-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
             {[...navRow1, ...navRow2, ...navRow3].map((link) => (
-              <a
-                key={link}
-                href="#"
-                className="block text-white font-['Inter',sans-serif] text-lg md:text-xl font-medium leading-tight"
-              >
-                {link}
-              </a>
+              <MobileNavItem key={link} link={link} onClick={() => setMenuOpen(false)} />
             ))}
           </div>
           <a
