@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import newsNotebook from "@/assets/news-notebook.jpg";
+import newsBasket from "@/assets/news-basket.jpg";
+import newsPath from "@/assets/news-path.jpg";
 
 const cards = [
-  { title: "The Story Behind Maasai Focus: Why We Started.", color: "#c8922a" },
-  { title: "Community Support: A Recent Family Visit in Nakuru.", color: "#b5411a" },
-  { title: "Moving Forward: Our 2026 Registration as an NGO.", color: "#4a5e1f" },
+  { title: "The Story Behind Maasai Focus: Why We Started.", image: newsNotebook, alt: "School notebook and pencil on a rustic table" },
+  { title: "Community Support: A Recent Family Visit in Nakuru.", image: newsBasket, alt: "Traditional woven basket with grains" },
+  { title: "Moving Forward: Our 2026 Registration as an NGO.", image: newsPath, alt: "Winding path through the savannah" },
 ];
 
 const LatestNews = () => {
@@ -18,7 +21,14 @@ const LatestNews = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {cards.map((card, i) => (
             <div key={i} className="overflow-hidden">
-              <div className="w-full h-[180px] sm:h-[200px] md:h-[220px]" style={{ background: card.color }} />
+              <img
+                src={card.image}
+                alt={card.alt}
+                className="w-full h-[180px] sm:h-[200px] md:h-[220px] object-cover"
+                loading="lazy"
+                width={800}
+                height={600}
+              />
               <span className="block font-['Inter',sans-serif] font-light text-[#2d3a0e] pt-4 px-1 text-base sm:text-lg md:text-xl lg:text-[23.68px] leading-relaxed">
                 {card.title}
               </span>

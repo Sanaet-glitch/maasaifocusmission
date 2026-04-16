@@ -2,6 +2,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroLandscape from "@/assets/hero-landscape.jpg";
 import beadworkDetail from "@/assets/beadwork-detail.jpg";
+import journeySprout from "@/assets/journey-sprout.jpg";
+import newsBasket from "@/assets/news-basket.jpg";
+import newsPath from "@/assets/news-path.jpg";
 
 const values = [
   {
@@ -22,9 +25,9 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2024", title: "Quiet Beginnings", description: "First student sponsorships — neighbors helping neighbors before any formal structure existed." },
-  { year: "2025", title: "Community Outreach", description: "Food relief efforts in Nakuru, responding to immediate needs with whatever we had." },
-  { year: "2026", title: "Formal Commitment", description: "Official NGO registration in Kenya — a tool to help us serve our community better." },
+  { year: "2024", title: "Quiet Beginnings", description: "First student sponsorships — neighbors helping neighbors before any formal structure existed.", image: journeySprout, alt: "Small sprout in red soil" },
+  { year: "2025", title: "Community Outreach", description: "Food relief efforts in Nakuru, responding to immediate needs with whatever we had.", image: newsBasket, alt: "Traditional basket with grains" },
+  { year: "2026", title: "Formal Commitment", description: "Official NGO registration in Kenya — a tool to help us serve our community better.", image: newsPath, alt: "Winding path through the savannah" },
 ];
 
 const About = () => {
@@ -85,13 +88,21 @@ const About = () => {
                       {item.year}
                     </span>
                   </div>
-                  <div className="pt-1">
+                  <div className="pt-1 flex-1">
                     <h3 className="font-['Inter',sans-serif] font-semibold text-lg md:text-xl text-white mb-1">
                       {item.title}
                     </h3>
-                    <p className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white/70 leading-relaxed">
+                    <p className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white/70 leading-relaxed mb-3">
                       {item.description}
                     </p>
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="w-full max-w-[400px] h-[140px] sm:h-[160px] object-cover rounded-lg"
+                      loading="lazy"
+                      width={800}
+                      height={600}
+                    />
                   </div>
                 </div>
               ))}
