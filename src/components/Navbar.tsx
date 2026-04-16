@@ -4,6 +4,7 @@ import { Menu, X, Accessibility } from "lucide-react";
 
 const linkMap: Record<string, string> = {
   About: "/about",
+  "Our Work": "/our-work",
   Programs: "/programs",
   "Find Us": "/contact",
   Careers: "/contact",

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const col1 = [
   { label: "Who We Are", to: "/about" },
+  { label: "Our Work", to: "/our-work" },
   { label: "Our Mission, Vision & Values", to: "/about" },
   { label: "Our Team", to: "/contact" },
   { label: "Board of Directors", to: "/contact" },
