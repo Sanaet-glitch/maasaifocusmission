@@ -4,18 +4,23 @@ import { Link } from "react-router-dom";
 const col1 = [
   { label: "Who We Are", to: "/about" },
   { label: "Our Mission, Vision & Values", to: "/about" },
-  { label: "Our Team", to: "#" },
-  { label: "Board of Directors", to: "#" },
-  { label: "Collaborations", to: "#" },
+  { label: "Our Team", to: "/contact" },
+  { label: "Board of Directors", to: "/contact" },
+  { label: "Collaborations", to: "/contact" },
 ];
 const col2 = ["Education", "Healthcare", "Livelihoods", "Community Development", "School Outreach", "Cultural Programs", "Recruitment"];
 const col3quick = [
-  { label: "Members Portal", to: "#" },
+  { label: "Members Portal", to: "/contact" },
   { label: "Find Us", to: "/contact" },
-  { label: "Careers", to: "#" },
+  { label: "Careers", to: "/contact" },
   { label: "Accountability Statement", to: "/contact" },
 ];
-const col3involved = ["Donate", "Volunteer", "Partner With Us", "News"];
+const col3involved = [
+  { label: "Donate", to: "/contact" },
+  { label: "Volunteer", to: "/contact" },
+  { label: "Partner With Us", to: "/contact" },
+  { label: "News", to: "/contact" },
+];
 
 const Footer = () => {
   return (
@@ -24,7 +29,7 @@ const Footer = () => {
       <div className="relative mx-auto w-full max-w-[1280px] px-6 sm:px-8 md:px-12 pt-12 md:pt-16 pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
         {/* Contact */}
         <div>
-          <img src="assets/logo.png" alt="Maasai Focus Mission" className="h-12 md:h-[65px] object-contain mb-4" />
+          <img src="/assets/logo.png" alt="Maasai Focus Mission" className="h-12 md:h-[65px] object-contain mb-4" />
           <p className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white">
             Questions?{" "}
             <Link to="/contact" className="text-[#c8922a]">Contact Us</Link>
@@ -40,9 +45,9 @@ const Footer = () => {
             <Twitter size={24} color="#c8922a" />
             <Youtube size={24} color="#c8922a" />
           </div>
-          <a href="#" className="block mt-6 font-['Inter',sans-serif] font-light text-sm md:text-base text-white">
+          <Link to="/contact" className="block mt-6 font-['Inter',sans-serif] font-light text-sm md:text-base text-white">
             Privacy Policy
-          </a>
+          </Link>
         </div>
 
         {/* About */}
@@ -68,19 +73,16 @@ const Footer = () => {
         {/* Quick Links + Get Involved */}
         <div>
           <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mb-4">Quick Links</h4>
-          {col3quick.map((l) => {
-            const Comp = l.to.startsWith("/") ? Link : "a";
-            return (
-              <Comp key={l.label} to={l.to as any} href={l.to.startsWith("/") ? undefined : l.to} className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
-                {l.label}
-              </Comp>
-            );
-          })}
+          {col3quick.map((l) => (
+            <Link key={l.label} to={l.to} className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
+              {l.label}
+            </Link>
+          ))}
           <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mt-8 mb-4">Get Involved</h4>
           {col3involved.map((l) => (
-            <a key={l} href="#" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
-              {l}
-            </a>
+            <Link key={l.label} to={l.to} className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
+              {l.label}
+            </Link>
           ))}
         </div>
       </div>

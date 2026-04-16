@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const MissionFeature = () => {
   return (
     <section className="w-screen relative">
@@ -18,9 +20,9 @@ const MissionFeature = () => {
                 Discover how we work and where your support goes.
               </p>
               <div className="mt-6">
-                <a href="#" className="bg-[#c8922a] text-[#2d3a0e] font-['Inter',sans-serif] font-black text-base md:text-lg lg:text-[19.84px] px-6 md:px-8 py-3 md:py-4 rounded-full inline-block">
+              <Link to="/programs" className="bg-[#c8922a] text-[#2d3a0e] font-['Inter',sans-serif] font-black text-base md:text-lg lg:text-[19.84px] px-6 md:px-8 py-3 md:py-4 rounded-full inline-block">
                   Explore Our Programs
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -35,9 +37,9 @@ const MissionFeature = () => {
           <p className="font-['Inter',sans-serif] font-light text-[#2d3a0e] mt-3 text-base sm:text-lg">
             Discover how we work and where your support goes.
           </p>
-          <a href="#" className="inline-block mt-4 bg-[#c8922a] text-[#2d3a0e] font-['Inter',sans-serif] font-black text-base sm:text-lg px-6 py-3 rounded-full">
+          <Link to="/programs" className="inline-block mt-4 bg-[#c8922a] text-[#2d3a0e] font-['Inter',sans-serif] font-black text-base sm:text-lg px-6 py-3 rounded-full">
             Explore Our Programs
-          </a>
+          </Link>
         </div>
       </div>
     </section>

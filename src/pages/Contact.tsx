@@ -9,7 +9,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Placeholder — no backend yet
     alert("Thank you for reaching out. We will get back to you soon.");
     setForm({ name: "", email: "", message: "" });
   };
@@ -27,6 +26,31 @@ const Contact = () => {
           <p className="font-['Inter',sans-serif] font-light text-lg md:text-xl text-white/70 mt-4 max-w-[600px]">
             We'd love to hear from you — whether you want to partner, volunteer, or simply say hello.
           </p>
+        </div>
+      </section>
+
+      {/* Roadmap note */}
+      <section className="w-screen relative bg-[#f9f8f4]">
+        <div className="mx-auto w-full max-w-[1280px] px-6 sm:px-8 md:px-12 py-8 md:py-10">
+          <div className="rounded-lg border border-[#c8922a]/30 bg-white p-6 md:p-8 max-w-[800px] mx-auto text-center">
+            <p className="font-['Inter',sans-serif] font-light text-base md:text-lg text-[#555] leading-relaxed">
+              Maasai Focus Mission is growing. Our <strong className="text-[#2d3a0e]">Members Portal</strong>, <strong className="text-[#2d3a0e]">Career Center</strong>, and <strong className="text-[#2d3a0e]">Training modules</strong> are part of our 2026–2027 roadmap. If you'd like to get involved early, please reach out below.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Donation note */}
+      <section className="w-screen relative bg-white">
+        <div className="mx-auto w-full max-w-[1280px] px-6 sm:px-8 md:px-12 py-6 md:py-8">
+          <div className="rounded-lg border-l-4 border-[#4a5e1f] bg-[#4a5e1f]/8 p-6 md:p-8 max-w-[800px] mx-auto">
+            <h3 className="font-['Inter',sans-serif] font-semibold text-lg md:text-xl text-[#2d3a0e] mb-2">
+              Want to Donate?
+            </h3>
+            <p className="font-['Inter',sans-serif] font-light text-base md:text-lg text-[#555] leading-relaxed">
+              Our digital donation portal is being finalized. Please contact us below to partner with our current projects.
+            </p>
+          </div>
         </div>
       </section>
 

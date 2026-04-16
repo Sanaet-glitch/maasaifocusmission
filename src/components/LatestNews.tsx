@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const cards = [
   { title: "The Story Behind Maasai Focus: Why We Started.", color: "#c8922a" },
   { title: "Community Support: A Recent Family Visit in Nakuru.", color: "#b5411a" },
@@ -17,18 +19,15 @@ const LatestNews = () => {
           {cards.map((card, i) => (
             <div key={i} className="overflow-hidden">
               <div className="w-full h-[180px] sm:h-[200px] md:h-[220px]" style={{ background: card.color }} />
-              <a
-                href="#"
-                className="block font-['Inter',sans-serif] font-light text-[#2d3a0e] pt-4 px-1 text-base sm:text-lg md:text-xl lg:text-[23.68px] leading-relaxed"
-              >
+              <span className="block font-['Inter',sans-serif] font-light text-[#2d3a0e] pt-4 px-1 text-base sm:text-lg md:text-xl lg:text-[23.68px] leading-relaxed">
                 {card.title}
-              </a>
-              <a
-                href="#"
+              </span>
+              <Link
+                to="/about"
                 className="font-['Inter',sans-serif] font-light text-[#b5411a] text-sm px-1"
               >
                 Read More →
-              </a>
+              </Link>
             </div>
           ))}
         </div>
