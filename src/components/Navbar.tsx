@@ -6,6 +6,9 @@ const linkMap: Record<string, string> = {
   About: "/about",
   Programs: "/programs",
   "Find Us": "/contact",
+  Careers: "/contact",
+  Volunteer: "/contact",
+  "Trainings & Events": "/contact",
 };
 
 const navRow1 = ["About", "Our Work", "Programs", "Stories", "News"];
@@ -56,12 +59,12 @@ const Navbar = () => {
 
         {/* CTA + Accessibility */}
         <div className="hidden lg:flex items-center gap-[10px]">
-          <a
-            href="#"
+          <Link
+            to="/contact"
             className="bg-[#c8922a] text-[#2d3a0e] font-['Inter',sans-serif] font-black text-base xl:text-[19.84px] px-6 xl:px-[33.728px] py-3 xl:py-[15.872px] rounded-full inline-block"
           >
             Donate Now
-          </a>
+          </Link>
           <button className="flex items-center justify-center w-11 h-11 rounded-full border-2 border-white bg-transparent text-white">
             <Accessibility size={20} />
           </button>
@@ -84,12 +87,12 @@ const Navbar = () => {
               <MobileNavItem key={link} link={link} onClick={() => setMenuOpen(false)} />
             ))}
           </div>
-          <a
-            href="#"
+          <Link
+            to="/contact"
             className="inline-block mt-6 bg-[#c8922a] text-[#2d3a0e] font-black text-lg px-8 py-4 rounded-full font-['Inter',sans-serif]"
           >
             Donate Now
-          </a>
+          </Link>
         </div>
       )}
     </nav>

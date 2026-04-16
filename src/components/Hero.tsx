@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   return (
     <section className="w-screen relative overflow-hidden">
@@ -18,12 +20,12 @@ const Hero = () => {
               sustainable healthcare, and holistic community transformation since 2025.
             </p>
             <div className="mt-6">
-              <a
-                href="#"
+              <Link
+                to="/about"
                 className="bg-[#c8922a] text-[#2d3a0e] font-['Inter',sans-serif] font-black text-base md:text-lg lg:text-[19.84px] px-6 md:px-8 py-3 md:py-4 rounded-full inline-block hover:opacity-90 transition-opacity"
               >
                 Learn Our Story
-              </a>
+              </Link>
             </div>
           </div>
 
