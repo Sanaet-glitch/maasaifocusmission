@@ -8,7 +8,7 @@ const linkMap: Record<string, string> = {
   Programs: "/programs",
   "Find Us": "/contact",
   Careers: "/contact",
-  Volunteer: "/contact",
+  Volunteer: "/volunteer",
   "Trainings & Events": "/contact",
 };
 

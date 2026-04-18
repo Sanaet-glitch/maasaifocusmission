@@ -18,8 +18,8 @@ const col3quick = [
 ];
 const col3involved = [
   { label: "Donate", to: "/contact" },
-  { label: "Volunteer", to: "/contact" },
-  { label: "Partner With Us", to: "/contact" },
+  { label: "Volunteer", to: "/volunteer" },
+  { label: "Partner With Us", to: "/partner" },
   { label: "News", to: "/contact" },
 ];
 
