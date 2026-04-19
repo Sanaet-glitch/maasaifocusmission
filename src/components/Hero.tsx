@@ -15,7 +15,7 @@ const Hero = () => {
               <br />
               <span className="text-white">Our People.</span>
             </h1>
-            <p className="font-['Inter',sans-serif] font-light text-white mt-4 max-w-[500px] text-base sm:text-lg md:text-xl lg:text-[23.68px] leading-relaxed">
+            <p className="font-['Inter',sans-serif] font-light text-white mt-6 max-w-[550px] text-lg md:text-xl lg:text-[24px] leading-relaxed">
               Empowering Maasai communities through education and sensitization,
               sustainable healthcare, and holistic community transformation since 2025.
             </p>

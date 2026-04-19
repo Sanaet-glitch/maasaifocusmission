@@ -71,10 +71,10 @@ const OurWork = () => {
       {/* The Three Pillars */}
       <section className="w-screen relative bg-white">
         <div className="mx-auto w-full max-w-[1280px] px-6 sm:px-8 md:px-12 py-12 md:py-16">
-          <h2 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-2xl sm:text-3xl md:text-[33px] lg:text-[37.504px] leading-tight mb-4 text-center">
+          <h2 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-3xl md:text-4xl leading-tight mb-6 text-center">
             The Three Pillars
           </h2>
-          <p className="font-['Inter',sans-serif] font-light text-base md:text-lg text-[#555] text-center max-w-[600px] mx-auto mb-10 md:mb-14">
+          <p className="font-['Inter',sans-serif] font-light text-lg md:text-xl text-[#555] text-center max-w-[700px] mx-auto mb-10 md:mb-14">
             Everything we do falls within three interconnected areas — because no single intervention is enough on its own.
           </p>
 
@@ -94,7 +94,7 @@ const OurWork = () => {
                     >
                       <Icon size={24} className="text-white" />
                     </div>
-                    <h3 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-xl sm:text-2xl md:text-[28px] leading-tight mb-1">
+                    <h3 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-2xl md:text-3xl leading-tight mb-1">
                       {pillar.title}
                     </h3>
                     <span
@@ -103,7 +103,7 @@ const OurWork = () => {
                     >
                       {pillar.subtitle}
                     </span>
-                    <p className="font-['Inter',sans-serif] font-light text-base md:text-lg text-[#555] leading-relaxed">
+                    <p className="font-['Inter',sans-serif] font-light text-lg text-[#555] leading-relaxed">
                       {pillar.description}
                     </p>
                   </div>

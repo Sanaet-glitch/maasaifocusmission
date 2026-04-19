@@ -51,10 +51,10 @@ const About = () => {
       <section className="w-screen relative bg-white">
         <div className="mx-auto w-full max-w-[1280px] px-6 sm:px-8 md:px-12 py-12 md:py-16 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
           <div className="flex-1">
-            <h2 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-2xl sm:text-3xl md:text-[33px] lg:text-[37.504px] leading-tight mb-6">
+            <h2 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-3xl md:text-4xl leading-tight mb-6">
               Who We Are
             </h2>
-            <p className="font-['Inter',sans-serif] font-light text-base sm:text-lg md:text-xl text-[#555] leading-relaxed">
+            <p className="font-['Inter',sans-serif] font-light text-lg md:text-xl text-[#555] leading-relaxed">
               Maasai Focus Mission didn't start in an office. It started in our community, seeing children who needed school fees and families who needed a hand. We are a small team dedicated to our roots. Before any registration or formal structure, we were simply neighbours responding to what was in front of us — with whatever we had.
             </p>
           </div>
