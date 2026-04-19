@@ -8,6 +8,8 @@ const linkMap: Record<string, string> = {
   Programs: "/programs",
   Stories: "/stories",
   News: "/about",
+  Team: "/team",
+  Collaborations: "/collaborations",
   "Find Us": "/contact",
   Careers: "/contact",
   Volunteer: "/volunteer",
@@ -15,8 +17,8 @@ const linkMap: Record<string, string> = {
 };
 
 const navRow1 = ["About", "Our Work", "Programs", "Stories", "News"];
-const navRow2 = ["Trainings & Events", "Careers", "Volunteer", "2025 Community Forum"];
-const navRow3 = ["2025 School Outreach Conference", "Communities of Practice"];
+const navRow2 = ["Team", "Collaborations", "Volunteer", "Trainings & Events"];
+const navRow3 = ["2025 Community Forum", "Communities of Practice"];
 
 const NavItem = ({ link }: { link: string }) => {
   const to = linkMap[link];

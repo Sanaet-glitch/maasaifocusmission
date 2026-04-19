@@ -11,6 +11,8 @@ import OurWork from "./pages/OurWork.tsx";
 import Volunteer from "./pages/Volunteer.tsx";
 import Partner from "./pages/Partner.tsx";
 import Stories from "./pages/Stories.tsx";
+import Team from "./pages/Team.tsx";
+import Collaborations from "./pages/Collaborations.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/stories" element={<Stories />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/collaborations" element={<Collaborations />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

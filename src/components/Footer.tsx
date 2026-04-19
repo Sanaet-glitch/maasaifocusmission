@@ -5,9 +5,9 @@ const col1 = [
   { label: "Who We Are", to: "/about" },
   { label: "Our Work", to: "/our-work" },
   { label: "Our Mission, Vision & Values", to: "/about" },
-  { label: "Our Team", to: "/contact" },
-  { label: "Board of Directors", to: "/contact" },
-  { label: "Collaborations", to: "/contact" },
+  { label: "Our Team", to: "/team" },
+  { label: "Board of Directors", to: "/team" },
+  { label: "Collaborations", to: "/collaborations" },
 ];
 const col2 = ["Education", "Healthcare", "Livelihoods", "Community Development", "School Outreach", "Cultural Programs", "Recruitment"];
 const col3quick = [
