@@ -12,10 +12,10 @@ const col1 = [
 const col2 = [
   { label: "Education", to: "/programs/education" },
   { label: "Healthcare", to: "/programs/healthcare" },
-  { label: "Livelihoods", to: "/programs" },
-  { label: "Community Development", to: "/programs" },
+  { label: "Livelihoods", to: "/programs/community" },
+  { label: "Community Development", to: "/programs/community" },
   { label: "School Outreach", to: "/programs/education" },
-  { label: "Cultural Programs", to: "/programs" },
+  { label: "Cultural Programs", to: "/programs/community" },
   { label: "Recruitment", to: "/contact" }
 ];
 const col3quick = [
