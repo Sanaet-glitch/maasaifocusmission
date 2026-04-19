@@ -11,7 +11,7 @@ const col1 = [
 ];
 const col2 = [
   { label: "Education", to: "/programs/education" },
-  { label: "Healthcare", to: "/programs" },
+  { label: "Healthcare", to: "/programs/healthcare" },
   { label: "Livelihoods", to: "/programs" },
   { label: "Community Development", to: "/programs" },
   { label: "School Outreach", to: "/programs/education" },
