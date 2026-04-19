@@ -10,6 +10,7 @@ const linkMap: Record<string, string> = {
   News: "/about",
   Team: "/team",
   Collaborations: "/collaborations",
+  Education: "/programs/education",
   "Find Us": "/contact",
   Careers: "/contact",
   Volunteer: "/volunteer",

@@ -9,7 +9,15 @@ const col1 = [
   { label: "Board of Directors", to: "/team" },
   { label: "Collaborations", to: "/collaborations" },
 ];
-const col2 = ["Education", "Healthcare", "Livelihoods", "Community Development", "School Outreach", "Cultural Programs", "Recruitment"];
+const col2 = [
+  { label: "Education", to: "/programs/education" },
+  { label: "Healthcare", to: "/programs" },
+  { label: "Livelihoods", to: "/programs" },
+  { label: "Community Development", to: "/programs" },
+  { label: "School Outreach", to: "/programs/education" },
+  { label: "Cultural Programs", to: "/programs" },
+  { label: "Recruitment", to: "/contact" }
+];
 const col3quick = [
   { label: "Members Portal", to: "/contact" },
   { label: "Find Us", to: "/contact" },
@@ -65,8 +73,8 @@ const Footer = () => {
         <div>
           <h4 className="font-['Inter',sans-serif] font-light text-base md:text-lg text-white mb-4">Programs & Services</h4>
           {col2.map((l) => (
-            <Link key={l} to="/programs" className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
-              {l}
+            <Link key={l.label} to={l.to} className="block font-['Inter',sans-serif] font-light text-base md:text-lg text-[#c8922a] my-3">
+              {l.label}
             </Link>
           ))}
         </div>
