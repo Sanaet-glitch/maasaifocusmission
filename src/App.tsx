@@ -16,7 +16,7 @@ import Collaborations from "./pages/Collaborations.tsx";
 import Education from "./pages/Education.tsx";
 import Healthcare from "./pages/Healthcare.tsx";
 import Community from "./pages/Community.tsx";
-import Events from "./pages/Events.tsx";
+
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -40,7 +40,7 @@ const App = () => (
           <Route path="/programs/education" element={<Education />} />
           <Route path="/programs/healthcare" element={<Healthcare />} />
           <Route path="/programs/community" element={<Community />} />
-          <Route path="/trainings-events" element={<Events />} />
+
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
