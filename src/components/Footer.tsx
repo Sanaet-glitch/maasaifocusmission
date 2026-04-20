@@ -21,7 +21,7 @@ const col2 = [
 const col3quick = [
   { label: "Members Portal", to: "/contact" },
   { label: "Find Us", to: "/contact" },
-  { label: "Careers", to: "/contact" },
+  { label: "Trainings & Events", to: "/trainings-events" },
   { label: "Accountability Statement", to: "/contact" },
 ];
 const col3involved = [

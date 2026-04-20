@@ -16,7 +16,7 @@ const linkMap: Record<string, string> = {
   "Find Us": "/contact",
   Careers: "/contact",
   Volunteer: "/volunteer",
-  "Trainings & Events": "/contact",
+  "Trainings & Events": "/trainings-events",
 };
 
 const navRow1 = ["About", "Our Work", "Programs", "Stories", "News"];
