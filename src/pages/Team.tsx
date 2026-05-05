@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Linkedin, Mail, ShieldCheck, Users, Heart } from "lucide-react";
 
 const teamMembers = [
   {
@@ -36,72 +37,137 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="min-h-screen bg-[#FCFBF8] overflow-x-hidden">
+    <div className="min-h-screen bg-[#fdfcf9] overflow-x-hidden">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="w-screen relative bg-[#2d3a0e]">
-        <div className="mx-auto w-full max-w-[1280px] px-6 sm:px-8 md:px-12 pt-[140px] md:pt-[180px] lg:pt-[220px] pb-12 md:pb-16">
-          <h1 className="font-['Playfair_Display',serif] font-black text-white text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight mb-6">
-            Our Team
-          </h1>
-          <p className="font-['Inter',sans-serif] font-light text-lg md:text-xl text-white/70 mt-4 max-w-[600px] leading-relaxed">
-            We are neighbors, leaders, and advocates walking together to serve the Maasai community.
-          </p>
+      {/* High-Premium Hero Section */}
+      <section className="relative pt-[160px] pb-24 md:pt-[220px] md:pb-32 bg-[#2d3a0e] overflow-hidden">
+        {/* Subtle Background Texture */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')]"></div>
+        </div>
+        
+        <div className="relative mx-auto max-w-[1280px] px-6 sm:px-8 md:px-12">
+          <div className="max-w-[800px]">
+            <span className="inline-block font-['Inter',sans-serif] font-semibold text-[#c8922a] uppercase tracking-[0.2em] text-sm mb-6">
+              Leadership & Stewardship
+            </span>
+            <h1 className="font-['Playfair_Display',serif] font-black text-white text-4xl sm:text-5xl md:text-6xl lg:text-[72px] leading-[1.1] mb-8">
+              The People Behind <br />
+              <span className="text-[#c8922a]">The Mission.</span>
+            </h1>
+            <p className="font-['Inter',sans-serif] font-light text-lg md:text-xl text-white/80 leading-relaxed max-w-[650px]">
+              We are a collective of neighbors, leaders, and advocates rooted in the community we serve. Our leadership is defined by proximity, accountability, and a shared vision for Maasai self-reliance.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Team Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      {/* Team Grid with Glassmorphism Elevation */}
+      <section className="py-24 md:py-32 relative">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-8 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
             {teamMembers.map((member, index) => (
-              <div key={index} className="group">
-                <div className="relative mb-6 overflow-hidden rounded-2xl aspect-[4/5] bg-gray-200">
+              <div key={index} className="group relative">
+                {/* Image Container with subtle glass border */}
+                <div className="relative mb-8 overflow-hidden rounded-3xl aspect-[4/5] bg-[#2d3a0e]/5 border border-[#2d3a0e]/10 shadow-2xl">
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2d3a0e]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p className="text-white text-sm font-medium leading-relaxed italic">
+                  {/* Glassmorphism Bio Overlay on Hover */}
+                  <div className="absolute inset-0 bg-[#2d3a0e]/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+                    <p className="text-white font-['Inter',sans-serif] font-light text-lg leading-relaxed italic mb-6">
                       "{member.bio}"
+                    </p>
+                    <div className="flex gap-4">
+                      <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-[#c8922a] transition-colors">
+                        <Linkedin className="w-5 h-5 text-white" />
+                      </a>
+                      <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-[#c8922a] transition-colors">
+                        <Mail className="w-5 h-5 text-white" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Member Info */}
+                <div className="px-2">
+                  <h3 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-2xl md:text-3xl mb-2 group-hover:text-[#c8922a] transition-colors">
+                    {member.name}
+                  </h3>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-[2px] bg-[#c8922a]"></div>
+                    <p className="font-['Inter',sans-serif] font-bold text-[#c8922a] uppercase tracking-[0.15em] text-xs">
+                      {member.role}
                     </p>
                   </div>
                 </div>
-                <h3 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-2xl mb-1">
-                  {member.name}
-                </h3>
-                <p className="font-['Inter',sans-serif] font-bold text-[#c8922a] uppercase tracking-wider text-sm">
-                  {member.role}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Board Section */}
-      <section className="py-20 bg-[#2d3a0e] text-white">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h2 className="font-['Playfair_Display',serif] font-black text-3xl md:text-4xl mb-8">
-            Governance & Accountability
-          </h2>
-          <p className="font-['Inter',sans-serif] font-light text-lg md:text-xl text-white/70 mb-12 leading-relaxed">
-            Our Board of Directors provides strategic oversight and ensures that every resource entrusted to us is used with radical transparency and integrity.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 border border-white/10 rounded-xl bg-white/5">
-              <h4 className="font-bold text-[#c8922a] mb-2">Samuel Ole Kina</h4>
-              <p className="text-sm text-white/60 uppercase tracking-widest">Chairperson</p>
+      {/* Governance & Institutional Trust Section */}
+      <section className="relative py-24 md:py-32 bg-[#2d3a0e] overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-[#c8922a]/5 skew-x-[15deg] -translate-x-1/4"></div>
+        
+        <div className="relative mx-auto max-w-[1280px] px-6 sm:px-8 md:px-12">
+          <div className="text-center max-w-[850px] mx-auto mb-20">
+            <h2 className="font-['Playfair_Display',serif] font-black text-white text-3xl md:text-5xl mb-8">
+              Governance & Accountability
+            </h2>
+            <div className="h-1 w-24 bg-[#c8922a] mx-auto mb-10"></div>
+            <p className="font-['Inter',sans-serif] font-light text-xl text-white/70 leading-relaxed">
+              Our Board of Directors provides strategic oversight and ensures that every resource entrusted to us is used with radical transparency and cultural integrity.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-[1000px] mx-auto">
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl text-center group hover:bg-white/10 transition-all">
+              <ShieldCheck className="w-10 h-10 text-[#c8922a] mx-auto mb-6" />
+              <h4 className="font-['Playfair_Display',serif] font-black text-white text-xl mb-2">Samuel Ole Kina</h4>
+              <p className="font-['Inter',sans-serif] text-white/50 text-xs font-bold uppercase tracking-[0.2em]">Chairperson</p>
             </div>
-            <div className="p-6 border border-white/10 rounded-xl bg-white/5">
-              <h4 className="font-bold text-[#c8922a] mb-2">Sarah Enane</h4>
-              <p className="text-sm text-white/60 uppercase tracking-widest">Secretary</p>
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl text-center group hover:bg-white/10 transition-all">
+              <Users className="w-10 h-10 text-[#c8922a] mx-auto mb-6" />
+              <h4 className="font-['Playfair_Display',serif] font-black text-white text-xl mb-2">Sarah Enane</h4>
+              <p className="font-['Inter',sans-serif] text-white/50 text-xs font-bold uppercase tracking-[0.2em]">Secretary</p>
             </div>
-            <div className="p-6 border border-white/10 rounded-xl bg-white/5">
-              <h4 className="font-bold text-[#c8922a] mb-2">David Lemayian</h4>
-              <p className="text-sm text-white/60 uppercase tracking-widest">Treasurer</p>
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl text-center group hover:bg-white/10 transition-all">
+              <Heart className="w-10 h-10 text-[#c8922a] mx-auto mb-6" />
+              <h4 className="font-['Playfair_Display',serif] font-black text-white text-xl mb-2">David Lemayian</h4>
+              <p className="font-['Inter',sans-serif] text-white/50 text-xs font-bold uppercase tracking-[0.2em]">Treasurer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join the Team CTA */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-8 md:px-12 text-center">
+          <div className="max-w-[700px] mx-auto">
+            <h2 className="font-['Playfair_Display',serif] font-black text-[#2d3a0e] text-3xl md:text-5xl mb-8">
+              Join Our Leadership
+            </h2>
+            <p className="font-['Inter',sans-serif] font-light text-xl text-[#555] mb-12 leading-relaxed">
+              We are always looking for passionate individuals who share our commitment to dignity-first development. Explore our current opportunities or volunteer your expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <a
+                href="/volunteer"
+                className="w-full sm:w-auto bg-[#c8922a] text-[#2d3a0e] font-['Inter',sans-serif] font-black text-lg px-12 py-5 rounded-full transition-all hover:scale-105 hover:shadow-xl"
+              >
+                Volunteer With Us
+              </a>
+              <a
+                href="/contact"
+                className="w-full sm:w-auto font-['Inter',sans-serif] font-bold text-[#2d3a0e] text-lg hover:text-[#c8922a] transition-colors underline decoration-[#c8922a] decoration-2 underline-offset-8"
+              >
+                Inquire About Careers
+              </a>
             </div>
           </div>
         </div>

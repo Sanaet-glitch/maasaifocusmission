@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 5173,
-    allowedHosts: ["5173-iy3mmo5886dzo1mknqngk-37629e5b.us2.manus.computer", "5174-iy3mmo5886dzo1mknqngk-37629e5b.us2.manus.computer"],
+    allowedHosts: ["5173-iy3mmo5886dzo1mknqngk-37629e5b.us2.manus.computer", "5174-iy3mmo5886dzo1mknqngk-37629e5b.us2.manus.computer", "5175-iy3mmo5886dzo1mknqngk-37629e5b.us2.manus.computer"],
     hmr: {
       overlay: false,
     },
